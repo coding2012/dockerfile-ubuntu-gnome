@@ -27,7 +27,7 @@ This repository contains the *Dockerfile* and *associated files* for setting up 
 
 	Or alternatively build an image from the Dockerfile:
 
-	`sudo docker build -t="cannycomputing/ubuntu-desktop-gnome" github.com/CannyComputing/Dockerfile-Ubuntu-Gnome`)
+	`sudo docker build -t="cannycomputing/dockerfile-ubuntu-gnome" github.com/CannyComputing/Dockerfile-Ubuntu-Gnome`)
 
 
 
@@ -39,11 +39,11 @@ This repository contains the *Dockerfile* and *associated files* for setting up 
 
 * this will run and drop you into a session:
 
-	`sudo docker run -it --rm -p 5901:5901 cannycomputing/ubuntu-desktop-gnome`
+	`sudo docker run -it --rm -p 5901:5901 cannycomputing/dockerfile-ubuntu-gnome`
 
 * or for silent running:
 
-	`sudo docker run -it -d -p 5901:5901 cannycomputing/ubuntu-desktop-gnome`
+	`sudo docker run -it -d -p 5901:5901 cannycomputing/dockerfile-ubuntu-gnome`
 
 #### Connecting to instance
 
