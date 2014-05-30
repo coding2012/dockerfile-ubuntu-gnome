@@ -27,7 +27,7 @@ This repository contains the *Dockerfile* and *associated files* for setting up 
 
 	Or alternatively build an image from the Dockerfile:
 
-	`sudo docker build -t="cannycomputing/dockerfile-ubuntu-gnome" github.com/CannyComputing/Dockerfile-Ubuntu-Gnome`)
+	`sudo docker build -t="cannycomputing/dockerfile-ubuntu-gnome" github.com/CannyComputing/Dockerfile-Ubuntu-Gnome`
 
 ### SuperQuick Install
 
