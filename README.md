@@ -29,6 +29,16 @@ This repository contains the *Dockerfile* and *associated files* for setting up 
 
 	`sudo docker build -t="cannycomputing/dockerfile-ubuntu-gnome" github.com/CannyComputing/Dockerfile-Ubuntu-Gnome`)
 
+### SuperQuick Install
+
+	This will get you going superfast - one line! - from a fresh Ubuntu install (rememebr to update the /etc/hosts file to relect your hostname at 127.0.1.1)
+
+	`sudo apt-get -y update && \
+	sudo apt-get -y install docker.io && \
+	sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker && \
+	sudo restart docker.io && \
+	sudo docker pull cannycomputing/dockerfile-ubuntu-gnome && \
+	sudo docker run -it --rm -p 5901:5901 cannycomputing/dockerfile-ubuntu-gnome`
 
 
 ### Usage
