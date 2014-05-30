@@ -22,29 +22,40 @@ This repository contains the *Dockerfile* and *associated files* for setting up 
 	sudo restart docker.io`
 
 
-2. You can build an image from the Dockerfile:
-	`sudo docker build -t="dockerfile/ubuntu-desktop-gnome" github.com/CannyComputing/Dockerfile-Ubuntu-Gnome`)
+2. You can then pull the file:
+	`sudo docker pull cannycomputing/dockerfile-ubuntu-gnome`
+
+	Or alternatively build an image from the Dockerfile:
+
+	`sudo docker build -t="cannycomputing/ubuntu-desktop-gnome" github.com/CannyComputing/Dockerfile-Ubuntu-Gnome`)
+
 
 
 ### Usage
 
 #### Starting
 
-* Change the port number to run multiple instances on the same host (rememeber to open the ports for tcp ingress)
-* This will run and drop you into a session: `sudo docker run -it --rm -p 5901:5901 dockerfile/ubuntu-desktop-gnome`
-* or for silent running: `sudo docker run -it -d -p 5901:5901 dockerfile/ubuntu-desktop-gnome`
+* Change the port number to run multiple instances on the same host (remeber to open the ports for tcp ingress)
 
-#### Connecting
+* this will run and drop you into a session:
 
-*Connect to `vnc://<host>:5901` via VNC client. currently the passweord is hardcoded to "acoman"
+	`sudo docker run -it --rm -p 5901:5901 cannycomputing/ubuntu-desktop-gnome`
+
+* or for silent running:
+
+	`sudo docker run -it -d -p 5901:5901 cannycomputing/ubuntu-desktop-gnome`
+
+#### Connecting to instance
+
+* Connect to `vnc://<host>:5901` via your VNC client. currently the password is hardcoded to "acoman"
 
 #### Notes
 
-*You can use the following command from within the container to kill the vnc server:
+* You can use the following command from within the container to kill the vnc server:
 
-`USER=root vncserver -kill :1`
+	`USER=root vncserver -kill :1`
 
-*Then run the following command from within the container to restart start the vnc server, the flags are optional but pretty self explanitory.
+* Then run the following command from within the container to restart start the vnc server, the flags are optional but pretty self explanatory.
 
-`USER=root vncserver :1 -geometry 1024x768 -depth 24`
+	`USER=root vncserver :1 -geometry 1024x768 -depth 24`
 
