@@ -2,6 +2,7 @@
 
 
 This repository contains the *Dockerfile* and *associated files* for setting up a container with Ubuntu, GNOME and TigerVNC for [Docker](https://www.docker.io/).
+
 * The VNC Server currently defaults to 1366*768 24bit.
 
 ### Dependencies
