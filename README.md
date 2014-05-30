@@ -23,7 +23,7 @@ This repository contains the *Dockerfile* and *associated files* for setting up 
 
 
 2. You can build an image from the Dockerfile:
-	`sudo docker build -t="dockerfile/ubuntu-desktop-gnome" github.com/intlabs/Docker-Ubuntu-Desktop-Gnome`)
+	`sudo docker build -t="dockerfile/ubuntu-desktop-gnome" github.com/CannyComputing/Dockerfile-Ubuntu-Gnome`)
 
 
 ### Usage
