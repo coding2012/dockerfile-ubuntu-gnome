@@ -1,8 +1,8 @@
 ## Ubuntu Desktop (GNOME) Dockerfile
 
 
-This repository contains *Dockerfile* of Ubuntu Desktop (GNOME) for [Docker](https://www.docker.io/).
-
+This repository contains the *Dockerfile* and *associated files* for setting up a container with Ubuntu, GNOME and TigerVNC for [Docker](https://www.docker.io/).
+* The VNC Server currently defaults to 1366*768 24bit.
 
 ### Dependencies
 
@@ -26,21 +26,24 @@ This repository contains *Dockerfile* of Ubuntu Desktop (GNOME) for [Docker](htt
 
 
 ### Usage
+
+#### Starting
+
 * Change the port number to run multiple instances on the same host (rememeber to open the ports for tcp ingress)
+* This will run and drop you into a session: `sudo docker run -it --rm -p 5901:5901 dockerfile/ubuntu-desktop-gnome`
+* or for silent running: `sudo docker run -it -d -p 5901:5901 dockerfile/ubuntu-desktop-gnome`
 
-	This will run and drop you into a session.
-    `sudo docker run -it --rm -p 5901:5901 dockerfile/ubuntu-desktop-gnome`
+#### Connecting
 
-    or for silent running:
-    `sudo docker run -it -d -p 5901:5901 dockerfile/ubuntu-desktop-gnome`
+*Connect to `vnc://<host>:5901` via VNC client. currently the passweord is hardcoded to "acoman"
 
-    You can use the following command from within the container to kill the vnc server:
+#### Notes
 
-    `USER=root vncserver -kill :1`
+*You can use the following command from within the container to kill the vnc server:
 
-    Then run the following command from within the container to restart start the vnc server:
+`USER=root vncserver -kill :1`
 
-    `USER=root vncserver :1 -geometry 1024x768 -depth 24`
+*Then run the following command from within the container to restart start the vnc server, the flags are optional but pretty self explanitory.
 
+`USER=root vncserver :1 -geometry 1024x768 -depth 24`
 
-Connect to `vnc://<host>:5901` via VNC client. currently the passweord is hardcoded to "acoman"
