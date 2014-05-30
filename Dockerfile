@@ -40,7 +40,7 @@ ADD https://raw.githubusercontent.com/CannyComputing/Dockerfile-Ubuntu-Gnome/mas
 RUN chmod +x /usr/local/etc/gnome-keybindings.pl
 
 # Add the script to fix and customise GNOME for docker
-ADD https://raw.githubusercontent.com/CannyComputing/Docker-Ubuntu-Gnome/master/gnome-docker-fix-and-customise.sh /usr/local/etc/gnome-docker-fix-and-customise.sh
+ADD https://raw.githubusercontent.com/CannyComputing/Dockerfile-Ubuntu-Gnome/master/gnome-docker-fix-and-customise.sh /usr/local/etc/gnome-docker-fix-and-customise.sh
 RUN chmod +x /usr/local/etc/gnome-docker-fix-and-customise.sh
 
 # Set up VNC
